@@ -17,14 +17,19 @@
 # Note: you can always generate the empty string ("").
 
 def generate_document(characters, document):
-    unique_document_characters = {}
+  counter = {}
+  # Add a count of each unique element in characters to a hash table.
 	for character in characters:
-		if unique_document_characters.get(character):
-			unique_document_characters[character] += 1
+		if character in counter:
+			counter[character] += 1
 		else:
-			unique_document_characters[character] = 1
+			counter[character] = 1
+  # For each letter in the document, check if it exists in the counter hash
+  # table. If it does, decrement by one to use up that letter. If it doesn't,
+  # or a required counter value is zero or below, return False.
 	for character in document:
-		if character not in unique_document_characters or unique_document_characters[character] <= 0:
+		if character not in counter or counter[character] <= 0:
 			return False
-		unique_document_characters[character] -= 1
+		counter[character] -= 1
 	return True
+
