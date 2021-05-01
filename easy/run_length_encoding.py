@@ -22,18 +22,18 @@
 import math
 
 def run_length_encoding(string):
-	result = ''
+	result = []
 	letter = string[0]
 	count = 1
     for character in string[1:]:
 		if character == letter:
 			count += 1
 		else:
-			result += encode(letter, count)
+			result.append(encode(letter, count))
 			count = 1
 			letter = character
 	if count > 0:
-		result += encode(letter, count)
+		result.append(encode(letter, count))
 	return result
 
 def encode(letter, count):
@@ -47,7 +47,7 @@ def encode(letter, count):
 # Improved solution
 
 def runLengthEncoding(string):
-	result = ''
+	result = []
 	letter = string[0]
 	count = 1
     for character in string[1:]:
@@ -55,10 +55,10 @@ def runLengthEncoding(string):
 			count += 1
 			if count > 9:
 				count = 1
-				result += str(9) + letter
+				result.append(str(9) + letter)
 		else:
-			result += str(count) + letter
+			result.append(str(count) + letter)
 			count = 1
 			letter = character
-	result += str(count) + letter
-	return result
+	result.append(str(count) + letter)
+	return ''.join(result)
