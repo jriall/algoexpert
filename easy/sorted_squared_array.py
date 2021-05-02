@@ -15,5 +15,19 @@ def sortedSquaredArray(array):
 	squares.sort()
 	return squares
 
-# TODO(jriall): Add O(n) solution
+# Optimal force solution O(n)
 
+def sorted_squared_array(array):
+	result = []
+	largest_index = len(array) - 1
+	smallest_index = 0
+  while smallest_index <= largest_index:
+    largest_square = array[largest_index] * array[largest_index]
+    smallest_square = array[smallest_index] * array[smallest_index]
+    if largest_square > smallest_square:
+      result.insert(0, largest_square)
+      largest_index -= 1
+    else:
+      result.insert(0, smallest_square)
+      smallest_index += 1
+	return result
