@@ -19,16 +19,16 @@
 
 def remove_duplicates_from_linked_list(linked_list):
   current_node = linked_list
-	while current_node.next:
-		next_node = current_node.next
-		if current_node.value == next_node.value:
-			if next_node.next:
-				current_node.next = next_node.next
-			else:
-				current_node.next = None
-		else:
-			current_node = current_node.next
-	return linked_list
+  while current_node.next:
+    next_node = current_node.next
+    if current_node.value == next_node.value:
+      if next_node.next:
+        current_node.next = next_node.next
+      else:
+        current_node.next = None
+    else:
+      current_node = current_node.next
+  return linked_list
 
 # This is an input class. Do not edit.
 class LinkedList:

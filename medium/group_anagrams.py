@@ -16,11 +16,11 @@
 # Solution
 
 def group_anagrams(words):
-	results = {}
-	for word in words:
-		alphabetized_string = ''.join(sorted(word))
-		if alphabetized_string in results:
-			results[alphabetized_string].append(word)
-		else:
-			results[alphabetized_string] = [word]
-	return list(results.values())
+  results = {}
+  for word in words:
+    alphabetized_string = ''.join(sorted(word))
+    if alphabetized_string in results:
+      results[alphabetized_string].append(word)
+    else:
+      results[alphabetized_string] = [word]
+  return list(results.values())

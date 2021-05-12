@@ -27,13 +27,13 @@
 # Solution
 
 def invertBinaryTree(tree):
-	if not tree:
-		return None
+  if not tree:
+    return None
   if tree.left or tree.right:
-		temp = invertBinaryTree(tree.left)
-		tree.left = invertBinaryTree(tree.right)
-		tree.right = temp
-	return tree
+    temp = invertBinaryTree(tree.left)
+    tree.left = invertBinaryTree(tree.right)
+    tree.right = temp
+  return tree
 
 
 # This is the class of the input binary tree.

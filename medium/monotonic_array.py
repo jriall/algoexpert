@@ -19,11 +19,11 @@
 # Solution
 
 def is_monotonic(array):
-	increase = 0
-	decrease = 0
+  increase = 0
+  decrease = 0
   for index in range(len(array) - 1):
-		if array[index] < array[index + 1]:
-			increase += 1
-		if array[index] > array[index + 1]:
-			decrease += 1
-	return False if increase > 0 and decrease > 0 else True
+    if array[index] < array[index + 1]:
+      increase += 1
+    if array[index] > array[index + 1]:
+      decrease += 1
+  return False if increase > 0 and decrease > 0 else True

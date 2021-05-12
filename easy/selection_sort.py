@@ -4,14 +4,14 @@
 
 def selection_sort(array):
   for i in range(len(array)):
-		smallest = i
-		for j in range(i, len(array)):
-			if array[j] < array[smallest]:
-				smallest = j
-		if smallest != i:
-			swap_places(i, smallest, array)
-	return array
+    smallest = i
+    for j in range(i, len(array)):
+      if array[j] < array[smallest]:
+        smallest = j
+    if smallest != i:
+      swap_places(i, smallest, array)
+  return array
 
 
 def swap_places(first, second, array):
-	array[first], array[second] = array[second], array[first]
+  array[first], array[second] = array[second], array[first]

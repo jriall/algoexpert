@@ -12,12 +12,12 @@
 # Note that you're allowed to mutate the input array.
 
 def first_duplicate_value(array):
-	acc = {}
-	for num in array:
-		if num in acc:
-			return num
-		else:
-			acc[num] = True
-	return -1
+  acc = {}
+  for num in array:
+    if num in acc:
+      return num
+    else:
+      acc[num] = True
+  return -1
 
 # TODO(jriall): Add solution with space complexity of O(1)

@@ -12,15 +12,15 @@
 
 def sortedSquaredArray(array):
   squares = [n * n for n in array]
-	squares.sort()
-	return squares
+  squares.sort()
+  return squares
 
 # Optimal force solution O(n)
 
 def sorted_squared_array(array):
-	result = []
-	largest_index = len(array) - 1
-	smallest_index = 0
+  result = []
+  largest_index = len(array) - 1
+  smallest_index = 0
   while smallest_index <= largest_index:
     largest_square = array[largest_index] * array[largest_index]
     smallest_square = array[smallest_index] * array[smallest_index]
@@ -30,4 +30,4 @@ def sorted_squared_array(array):
     else:
       result.insert(0, smallest_square)
       smallest_index += 1
-	return result
+  return result

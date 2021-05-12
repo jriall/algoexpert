@@ -18,10 +18,10 @@
 
 def non_constructible_change(coins):
   coins.sort()
-	max_change_value = 0
-	for coin in coins:
-		if coin > max_change_value + 1:
-			return max_change_value + 1
-		else:
-			max_change_value += coin
-	return max_change_value + 1
+  max_change_value = 0
+  for coin in coins:
+    if coin > max_change_value + 1:
+      return max_change_value + 1
+    else:
+      max_change_value += coin
+  return max_change_value + 1

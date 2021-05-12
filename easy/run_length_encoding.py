@@ -22,43 +22,43 @@
 import math
 
 def run_length_encoding(string):
-	result = []
-	letter = string[0]
-	count = 1
+  result = []
+  letter = string[0]
+  count = 1
     for character in string[1:]:
-		if character == letter:
-			count += 1
-		else:
-			result.append(encode(letter, count))
-			count = 1
-			letter = character
-	if count > 0:
-		result.append(encode(letter, count))
-	return result
+    if character == letter:
+      count += 1
+    else:
+      result.append(encode(letter, count))
+      count = 1
+      letter = character
+  if count > 0:
+    result.append(encode(letter, count))
+  return result
 
 def encode(letter, count):
-	if count < 10:
-		return str(count) + letter
-	else:
-		nines = math.floor(count / 9)
-		remainder = count % 9
-		return (str(9) + letter) * nines + str(remainder) + letter
+  if count < 10:
+    return str(count) + letter
+  else:
+    nines = math.floor(count / 9)
+    remainder = count % 9
+    return (str(9) + letter) * nines + str(remainder) + letter
 
 # Improved solution
 
 def runLengthEncoding(string):
-	result = []
-	letter = string[0]
-	count = 1
+  result = []
+  letter = string[0]
+  count = 1
     for character in string[1:]:
-		if character == letter:
-			count += 1
-			if count > 9:
-				count = 1
-				result.append(str(9) + letter)
-		else:
-			result.append(str(count) + letter)
-			count = 1
-			letter = character
-	result.append(str(count) + letter)
-	return ''.join(result)
+    if character == letter:
+      count += 1
+      if count > 9:
+        count = 1
+        result.append(str(9) + letter)
+    else:
+      result.append(str(count) + letter)
+      count = 1
+      letter = character
+  result.append(str(count) + letter)
+  return ''.join(result)

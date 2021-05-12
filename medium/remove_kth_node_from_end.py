@@ -38,18 +38,18 @@ class LinkedList:
 
 def removeKthNodeFromEnd(head, k):
   current_node = head
-	count = 0
-	node_to_remove_prev = head
-	node_to_remove = head
-	while current_node is not None:
-		if count < k:
-			count += 1
-		else:
-			node_to_remove_prev = node_to_remove
-			node_to_remove = node_to_remove.next
-		current_node = current_node.next
-	if node_to_remove_prev is node_to_remove:
-		head.value = head.next.value
-		head.next = head.next.next
-	else:
-		node_to_remove_prev.next = node_to_remove.next
+  count = 0
+  node_to_remove_prev = head
+  node_to_remove = head
+  while current_node is not None:
+    if count < k:
+      count += 1
+    else:
+      node_to_remove_prev = node_to_remove
+      node_to_remove = node_to_remove.next
+    current_node = current_node.next
+  if node_to_remove_prev is node_to_remove:
+    head.value = head.next.value
+    head.next = head.next.next
+  else:
+    node_to_remove_prev.next = node_to_remove.next

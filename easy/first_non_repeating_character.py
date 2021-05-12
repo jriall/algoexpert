@@ -10,12 +10,12 @@
 
 def first_non_repeating_character(string):
   counter = {}
-	for character in string:
-		if character in counter:
-			counter[character] += 1
-		else:
-			counter[character] = 1
-	for index, character in enumerate(string):
-		if counter[character] == 1:
-			return index
+  for character in string:
+    if character in counter:
+      counter[character] += 1
+    else:
+      counter[character] = 1
+  for index, character in enumerate(string):
+    if counter[character] == 1:
+      return index
     return -1

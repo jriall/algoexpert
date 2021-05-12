@@ -21,10 +21,10 @@
 # Solutions
 
 def product_sum(array, depth = 1):
-	result = 0
+  result = 0
   for item in array:
-		if type(item) is int:
-			result += item
-		elif type(item) is list:
-			result += productSum(item, depth + 1)
-	return result * depth
+    if type(item) is int:
+      result += item
+    elif type(item) is list:
+      result += productSum(item, depth + 1)
+  return result * depth

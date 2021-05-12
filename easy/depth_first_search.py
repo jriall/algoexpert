@@ -31,6 +31,6 @@ class Node:
 
     def depthFirstSearch(self, array):
         array.append(self.name)
-		for child in self.children:
-			child.depthFirstSearch(array)
-		return array
+    for child in self.children:
+      child.depthFirstSearch(array)
+    return array

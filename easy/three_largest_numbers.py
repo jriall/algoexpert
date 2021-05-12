@@ -9,19 +9,19 @@
 import math
 
 def findThreeLargestNumbers(array):
-	results = {
-		'smallest': -math.inf,
-		'middle': -math.inf,
-		'largest': -math.inf,
-	}
-	for num in array:
-		if num > results['largest']:
-			results['smallest'] = results['middle']
-			results['middle'] = results['largest']
-			results['largest'] = num
-		elif num > results['middle']:
-			results['smallest'] = results['middle']
-			results['middle'] = num
-		elif num > results['smallest']:
-			results['smallest'] = num
-	return [results['smallest'], results['middle'], results['largest']]
+  results = {
+    'smallest': -math.inf,
+    'middle': -math.inf,
+    'largest': -math.inf,
+  }
+  for num in array:
+    if num > results['largest']:
+      results['smallest'] = results['middle']
+      results['middle'] = results['largest']
+      results['largest'] = num
+    elif num > results['middle']:
+      results['smallest'] = results['middle']
+      results['middle'] = num
+    elif num > results['smallest']:
+      results['smallest'] = num
+  return [results['smallest'], results['middle'], results['largest']]

@@ -21,24 +21,24 @@
 # Initial solution - O(2^n) time, O(n) space
 def get_nth_fib(n):
   if n == 1:
-		return 0
-	elif n == 2:
-		return 1
-	else:
-		return getNthFib(n - 1) + getNthFib(n - 2)
+    return 0
+  elif n == 2:
+    return 1
+  else:
+    return getNthFib(n - 1) + getNthFib(n - 2)
 
 # Improved solution - O(n) time, O(1) space
 def get_nth_fib(n):
-	if n == 1:
-		return 0
-	if n == 2:
-		return 1
+  if n == 1:
+    return 0
+  if n == 2:
+    return 1
     minus_two = 0
-	minus_one = 1
-	curr = 1
-	for num in range(n - 3):
-		new_curr = curr + minus_one
-		minus_two = minus_one
-		minus_one = curr
-		curr = new_curr
-	return curr
+  minus_one = 1
+  curr = 1
+  for num in range(n - 3):
+    new_curr = curr + minus_one
+    minus_two = minus_one
+    minus_one = curr
+    curr = new_curr
+  return curr

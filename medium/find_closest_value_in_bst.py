@@ -27,15 +27,15 @@
 
 def findClosestValueInBst(tree, target):
   current = tree
-	closest = tree.value
-	while current is not None:
-		if abs(target - current.value) < abs(target - closest):
-			closest = current.value
-		if current.left is not None and target < current.value:
-			current = current.left
-		else:
-			current = current.right
-	return closest
+  closest = tree.value
+  while current is not None:
+    if abs(target - current.value) < abs(target - closest):
+      closest = current.value
+    if current.left is not None and target < current.value:
+      current = current.left
+    else:
+      current = current.right
+  return closest
 
 
 # This is the class of the input tree. Do not edit.

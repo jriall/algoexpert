@@ -30,19 +30,19 @@
 
 def node_depths(root):
     sum = []
-	navigate_branch(root, 0, sum)
-	result = 0
-	for num in sum:
-		result += num
-	return result
+  navigate_branch(root, 0, sum)
+  result = 0
+  for num in sum:
+    result += num
+  return result
 
 def navigate_branch(node, depth, sum):
-	if node is None:
-		return
-	sum.append(depth)
-	depth += 1
-	navigate_branch(node.left, depth, sum)
-	navigate_branch(node.right, depth, sum)
+  if node is None:
+    return
+  sum.append(depth)
+  depth += 1
+  navigate_branch(node.left, depth, sum)
+  navigate_branch(node.right, depth, sum)
 
 
 # This is the class of the input binary tree.
@@ -56,9 +56,9 @@ class BinaryTree:
 # Improved recursive solution
 
 def node_depths(root, depth = 0):
-	if root is None:
-		return 0
-	return depth + nodeDepths(root.left, depth + 1) + nodeDepths(root.right, depth + 1)
+  if root is None:
+    return 0
+  return depth + nodeDepths(root.left, depth + 1) + nodeDepths(root.right, depth + 1)
 
 
 # This is the class of the input binary tree.

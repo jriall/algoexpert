@@ -21,30 +21,30 @@ def two_number_sum(array, target_sum):
     for second_number in array[index+1:]:
       if first_number + second_number == target_sum:
         return [first_number, second_number]
-	return []
+  return []
 
 
 # O(n) approach using a hash table as a loopup
 
 def two_number_sum(array, target_sum):
   lookup = {}
-	for num in array:
+  for num in array:
     # True is an arbitrary value - we only care about the keys
-		lookup[num] = True
-	for num in array:
-		target_number = target_sum - num
-		if target_number in lookup and target_number is not num:
-			return [num, target_number]
-	return []
+    lookup[num] = True
+  for num in array:
+    target_number = target_sum - num
+    if target_number in lookup and target_number is not num:
+      return [num, target_number]
+  return []
 
 
 # Refined O(n) approach as a simpliciation to the above.
 
 def two_number_sum(array, target_sum):
     lookup = {}
-	for num in array:
-		if (target_sum - num in lookup):
-			return [target_sum - num,  num]
+  for num in array:
+    if (target_sum - num in lookup):
+      return [target_sum - num,  num]
     # True is an arbitrary value - we only care about the keys
-		lookup[num] = True
-	return []
+    lookup[num] = True
+  return []

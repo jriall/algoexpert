@@ -35,15 +35,15 @@ class BinaryTree:
     self.right = None
 
 def branchSums(root):
-	result = []
-	navigate_branch(root, 0, result)
-	return result
+  result = []
+  navigate_branch(root, 0, result)
+  return result
 
 def navigate_branch(root, branch_total, result):
-	new_branch_total = branch_total + root.value
-	if root.left:
-		navigate_branch(root.left, new_branch_total, result)
-	if root.right:
-		navigate_branch(root.right, new_branch_total, result)
-	if not root.left and not root.right:
-		result.append(new_branch_total)
+  new_branch_total = branch_total + root.value
+  if root.left:
+    navigate_branch(root.left, new_branch_total, result)
+  if root.right:
+    navigate_branch(root.right, new_branch_total, result)
+  if not root.left and not root.right:
+    result.append(new_branch_total)

@@ -29,10 +29,10 @@
 
 def minimumWaitingTime(queries):
     queries.sort()
-	result = 0
-	wait_time = 0
-	for index, query in enumerate(queries):
-		if index != len(queries) - 1:
-			result += wait_time + query
-			wait_time += query
-	return result
+  result = 0
+  wait_time = 0
+  for index, query in enumerate(queries):
+    if index != len(queries) - 1:
+      result += wait_time + query
+      wait_time += query
+  return result

@@ -33,22 +33,22 @@ class LinkedList:
 
 
 def sumOfLinkedLists(linkedListOne, linkedListTwo):
-	number_one = sum_of_linked_list(linkedListOne)
-	number_two = sum_of_linked_list(linkedListTwo)
-	sum = number_one + number_two
-	sum_str = str(sum)
-	current_node = None
-	for string in sum_str:
-		new_head = LinkedList(int(string))
-		new_head.next = current_node
-		current_node = new_head
-	return current_node
+  number_one = sum_of_linked_list(linkedListOne)
+  number_two = sum_of_linked_list(linkedListTwo)
+  sum = number_one + number_two
+  sum_str = str(sum)
+  current_node = None
+  for string in sum_str:
+    new_head = LinkedList(int(string))
+    new_head.next = current_node
+    current_node = new_head
+  return current_node
 
 
 def sum_of_linked_list(node):
-	result = []
-	current_node = node
-	while current_node is not None:
-		result.insert(0, str(current_node.value))
-		current_node = current_node.next
-	return int(''.join(result))
+  result = []
+  current_node = node
+  while current_node is not None:
+    result.insert(0, str(current_node.value))
+    current_node = current_node.next
+  return int(''.join(result))

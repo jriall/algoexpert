@@ -36,10 +36,10 @@ def validateBst(tree):
   return validate_node_helper(tree, float('-inf'), float('inf'))
 
 def validate_node_helper(node, min, max):
-	if node is None:
-		return True
-	if node.value >= max or node.value < min:
-		return False
-	left_node_is_valid = validate_node_helper(node.left, min, node.value)
-	right_node_is_valid = validate_node_helper(node.right, node.value, max)
-	return left_node_is_valid and right_node_is_valid
+  if node is None:
+    return True
+  if node.value >= max or node.value < min:
+    return False
+  left_node_is_valid = validate_node_helper(node.left, min, node.value)
+  right_node_is_valid = validate_node_helper(node.right, node.value, max)
+  return left_node_is_valid and right_node_is_valid

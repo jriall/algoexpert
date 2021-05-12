@@ -31,9 +31,9 @@
 # Solution
 
 def tandem_bicycle(red_shirt_speeds, blue_shirt_speeds, fastest):
-	red_shirt_speeds.sort(reverse=fastest)
-	blue_shirt_speeds.sort()
-	result = 0
-	for index, red in enumerate(red_shirt_speeds):
-		result += max(red, blue_shirt_speeds[index])
-	return result
+  red_shirt_speeds.sort(reverse=fastest)
+  blue_shirt_speeds.sort()
+  result = 0
+  for index, red in enumerate(red_shirt_speeds):
+    result += max(red, blue_shirt_speeds[index])
+  return result

@@ -25,31 +25,31 @@ Sample Output
 
 def reverse_words_in_string(string):
   result = []
-	word = []
-	for index in reversed(range(len(string))):
-		if string[index] != ' ':
-			word.insert(0, string[index])
-		else:
-			if len(word) > 0:
-				result.append(''.join(word))
-				word = []
+  word = []
+  for index in reversed(range(len(string))):
+    if string[index] != ' ':
+      word.insert(0, string[index])
+    else:
+      if len(word) > 0:
+        result.append(''.join(word))
+        word = []
 
-			result.append(' ')
-	result.append(''.join(word))
-	return ''.join(result)
+      result.append(' ')
+  result.append(''.join(word))
+  return ''.join(result)
 
 # Simpler solution iterating through the string in order
 
 def reverse_words_in_string(string):
   result = []
-	word = []
-	for letter in string:
-		if letter == ' ':
-			if len(word) > 0:
-				result.insert(0, ''.join(word))
-				word = []
-			result.insert(0, ' ')
-		else:
-			word.append(letter)
-	result.insert(0, ''.join(word))
-	return ''.join(result)
+  word = []
+  for letter in string:
+    if letter == ' ':
+      if len(word) > 0:
+        result.insert(0, ''.join(word))
+        word = []
+      result.insert(0, ' ')
+    else:
+      word.append(letter)
+  result.insert(0, ''.join(word))
+  return ''.join(result)

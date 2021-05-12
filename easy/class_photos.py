@@ -26,12 +26,12 @@
 # true // Place all students with blue shirts in the back row.
 
 def class_photos(red_shirt_heights, blue_shirt_heights):
-	red_shirt_heights.sort()
-	blue_shirt_heights.sort()
-	red_is_taller = 0
-	for index, shirt in enumerate(red_shirt_heights):
-		if shirt == blue_shirt_heights[index]:
-			return False
-		if shirt > blue_shirt_heights[index]:
-			red_is_taller += 1
-	return red_is_taller == len(red_shirt_heights) or red_is_taller == 0
+  red_shirt_heights.sort()
+  blue_shirt_heights.sort()
+  red_is_taller = 0
+  for index, shirt in enumerate(red_shirt_heights):
+    if shirt == blue_shirt_heights[index]:
+      return False
+    if shirt > blue_shirt_heights[index]:
+      red_is_taller += 1
+  return red_is_taller == len(red_shirt_heights) or red_is_taller == 0

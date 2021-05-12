@@ -39,18 +39,18 @@
 # // Python -  6 points
 
 def tournament_winner(competitions, results):
-	table = {}
-	winning_team = None
-	highest_score = 0
+  table = {}
+  winning_team = None
+  highest_score = 0
     for index, result in enumerate(results):
-		winner_index = 0 if result == 1 else 1
-		team = competitions[index][winner_index]
-		if table.get(team):
-			table[team] += 3
-		else:
-			table[team] = 3
-		team_score = table.get(team)
-		if team_score > highest_score:
-			winning_team = team
-			highest_score = team_score
-	return winning_team
+    winner_index = 0 if result == 1 else 1
+    team = competitions[index][winner_index]
+    if table.get(team):
+      table[team] += 3
+    else:
+      table[team] = 3
+    team_score = table.get(team)
+    if team_score > highest_score:
+      winning_team = team
+      highest_score = team_score
+  return winning_team

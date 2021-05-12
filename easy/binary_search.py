@@ -6,13 +6,13 @@
 
 def binary_search(array, target):
   start_pointer = 0
-	end_pointer = len(array) - 1
-	while start_pointer <= end_pointer:
-		middle_pointer = round((end_pointer + start_pointer) / 2)
-		if array[middle_pointer] == target:
-			return middle_pointer
-		elif array[middle_pointer] > target:
-			end_pointer = middle_pointer - 1
-		else:
-			start_pointer = middle_pointer + 1
-	return -1
+  end_pointer = len(array) - 1
+  while start_pointer <= end_pointer:
+    middle_pointer = round((end_pointer + start_pointer) / 2)
+    if array[middle_pointer] == target:
+      return middle_pointer
+    elif array[middle_pointer] > target:
+      end_pointer = middle_pointer - 1
+    else:
+      start_pointer = middle_pointer + 1
+  return -1

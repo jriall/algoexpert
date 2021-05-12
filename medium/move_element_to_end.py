@@ -16,14 +16,14 @@
 
 def moveElementToEnd(array, toMove):
   start_index = 0
-	end_index = len(array) - 1
-	while start_index < end_index:
-		if array[end_index] == toMove:
-			end_index -= 1
-		elif array[start_index] != toMove:
-			start_index += 1
-		else:
-			temp = array[start_index]
-			array[start_index] = array[end_index]
-			array[end_index] = temp
-	return array
+  end_index = len(array) - 1
+  while start_index < end_index:
+    if array[end_index] == toMove:
+      end_index -= 1
+    elif array[start_index] != toMove:
+      start_index += 1
+    else:
+      temp = array[start_index]
+      array[start_index] = array[end_index]
+      array[end_index] = temp
+  return array

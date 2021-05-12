@@ -19,17 +19,17 @@
 def generate_document(characters, document):
   counter = {}
   # Add a count of each unique element in characters to a hash table.
-	for character in characters:
-		if character in counter:
-			counter[character] += 1
-		else:
-			counter[character] = 1
+  for character in characters:
+    if character in counter:
+      counter[character] += 1
+    else:
+      counter[character] = 1
   # For each letter in the document, check if it exists in the counter hash
   # table. If it does, decrement by one to use up that letter. If it doesn't,
   # or a required counter value is zero or below, return False.
-	for character in document:
-		if character not in counter or counter[character] <= 0:
-			return False
-		counter[character] -= 1
-	return True
+  for character in document:
+    if character not in counter or counter[character] <= 0:
+      return False
+    counter[character] -= 1
+  return True
 
