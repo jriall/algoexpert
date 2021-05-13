@@ -8,7 +8,7 @@
 
 import math
 
-def findThreeLargestNumbers(array):
+def find_three_largest_numbers(array):
   results = {
     'smallest': -math.inf,
     'middle': -math.inf,

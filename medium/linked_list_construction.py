@@ -14,20 +14,20 @@ class DoublyLinkedList:
       self.head = None
       self.tail = None
 
-  def setHead(self, node):
+  def set_head(self, node):
     if self.head is None:
       self.head = node
       self.tail = node
     else:
       self.insertBefore(self.head, node)
 
-  def setTail(self, node):
+  def set_tail(self, node):
     if self.tail is None:
       self.setHead(node)
     else:
       self.insertAfter(self.tail, node)
 
-  def insertBefore(self, node, nodeToInsert):
+  def insert_before(self, node, nodeToInsert):
     if nodeToInsert == self.head and nodeToInsert == self.tail:
       return
     self.remove(nodeToInsert)
@@ -37,10 +37,9 @@ class DoublyLinkedList:
       node.prev.next = nodeToInsert
     else:
       self.head = nodeToInsert
+    node.prev = nodeToInsert
 
-  node.prev = nodeToInsert
-
-  def insertAfter(self, node, nodeToInsert):
+  def insert_after(self, node, nodeToInsert):
     if nodeToInsert == self.head and nodeToInsert == self.tail:
       return
     self.remove(nodeToInsert)
@@ -52,7 +51,7 @@ class DoublyLinkedList:
       self.tail = nodeToInsert
     node.next = nodeToInsert
 
-  def insertAtPosition(self, position, nodeToInsert):
+  def insert_at_position(self, position, nodeToInsert):
     if position == 1:
       self.setHead(nodeToInsert)
       return
@@ -66,7 +65,7 @@ class DoublyLinkedList:
     else:
       self.setTail(nodeToInsert)
 
-  def removeNodesWithValue(self, value):
+  def remove_nodes_with_value(self, value):
     current_node = self.head
     while current_node is not None:
       node_to_consider = current_node
@@ -89,7 +88,7 @@ class DoublyLinkedList:
     node.prev = None
     node.next = None
 
-  def containsNodeWithValue(self, value):
+  def contains_node_with_value(self, value):
     current_node = self.head
     while current_node is not None:
       if current_node.value == value:

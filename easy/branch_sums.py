@@ -34,7 +34,7 @@ class BinaryTree:
     self.left = None
     self.right = None
 
-def branchSums(root):
+def branch_sums(root):
   result = []
   navigate_branch(root, 0, result)
   return result

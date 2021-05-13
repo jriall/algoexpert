@@ -27,8 +27,8 @@
 
 # Solution
 
-def minimumWaitingTime(queries):
-    queries.sort()
+def minimum_waiting_time(queries):
+  queries.sort()
   result = 0
   wait_time = 0
   for index, query in enumerate(queries):

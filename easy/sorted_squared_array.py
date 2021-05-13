@@ -10,7 +10,7 @@
 
 # Brute force solution O(n log n)
 
-def sortedSquaredArray(array):
+def sorted_squared_array(array):
   squares = [n * n for n in array]
   squares.sort()
   return squares

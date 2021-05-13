@@ -36,7 +36,7 @@ class LinkedList:
     self.next = None
 
 
-def removeKthNodeFromEnd(head, k):
+def remove_kth_node_from_end(head, k):
   current_node = head
   count = 0
   node_to_remove_prev = head

@@ -41,7 +41,7 @@ def two_number_sum(array, target_sum):
 # Refined O(n) approach as a simpliciation to the above.
 
 def two_number_sum(array, target_sum):
-    lookup = {}
+  lookup = {}
   for num in array:
     if (target_sum - num in lookup):
       return [target_sum - num,  num]

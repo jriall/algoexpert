@@ -7,7 +7,7 @@
 # Note that letters should "wrap" around the alphabet; in other words, the
 # letter z shifted by one returns the letter a.
 
-def caesarCipherEncryptor(string, key):
+def caesar_cipher_encryptor(string, key):
   result = []
   for letter in string:
     new_char_code = ord(letter) + key

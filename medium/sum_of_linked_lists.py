@@ -32,7 +32,7 @@ class LinkedList:
     self.next = None
 
 
-def sumOfLinkedLists(linkedListOne, linkedListTwo):
+def sum_of_linked_lists(linkedListOne, linkedListTwo):
   number_one = sum_of_linked_list(linkedListOne)
   number_two = sum_of_linked_list(linkedListTwo)
   sum = number_one + number_two

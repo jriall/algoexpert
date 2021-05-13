@@ -25,7 +25,7 @@
 
 # Solution
 
-def findClosestValueInBst(tree, target):
+def find_closest_value_in_bst(tree, target):
   current = tree
   closest = tree.value
   while current is not None:

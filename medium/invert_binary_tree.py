@@ -26,7 +26,7 @@
 
 # Solution
 
-def invertBinaryTree(tree):
+def invert_binary_tree(tree):
   if not tree:
     return None
   if tree.left or tree.right:

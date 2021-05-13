@@ -7,7 +7,7 @@
 
 import math
 
-def isPalindrome(string):
+def is_palindrome(string):
   # We only need to iterate through half of the string (excluding the middle
   # letter if present) to match against the corresponding paired letter in
   # the second half of the string.

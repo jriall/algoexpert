@@ -32,8 +32,9 @@ class BST:
     self.right = None
 
 
-def validateBst(tree):
+def validate_bst(tree):
   return validate_node_helper(tree, float('-inf'), float('inf'))
+
 
 def validate_node_helper(node, min, max):
   if node is None:

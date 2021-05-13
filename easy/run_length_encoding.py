@@ -46,7 +46,7 @@ def encode(letter, count):
 
 # Improved solution
 
-def runLengthEncoding(string):
+def run_length_encoding(string):
   result = []
   letter = string[0]
   count = 1

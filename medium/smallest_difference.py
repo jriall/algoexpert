@@ -19,7 +19,7 @@
 
 # Solution
 
-def smallestDifference(arrayOne, arrayTwo):
+def smallest_difference(arrayOne, arrayTwo):
   arrayOne.sort()
   arrayTwo.sort()
   result = [arrayOne[0], arrayTwo[0]]
