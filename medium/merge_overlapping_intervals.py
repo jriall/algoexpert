@@ -47,3 +47,23 @@ def mergeOverlappingIntervals(intervals):
     result.append(new_interval)
     i = j
   return result
+
+# Slightly simplified solution
+
+def mergeOverlappingIntervals(intervals):
+  intervals.sort()
+  result = [] 
+  i = 0
+  while i < len(intervals):
+    current = intervals[i]
+    new_interval = [current[0], current[1]]
+    j = i + 1
+    while j < len(intervals):
+      if intervals[j][0] <= new_interval[1]:
+        new_interval[1] = max([intervals[j][1], current[1]])
+        j += 1
+      else:
+        break
+    result.append(new_interval)
+    i = j
+  return result
