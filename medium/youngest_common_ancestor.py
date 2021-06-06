@@ -35,9 +35,9 @@
 
 # This is an input class. Do not edit.
 class AncestralTree:
-    def __init__(self, name):
-        self.name = name
-        self.ancestor = None
+  def __init__(self, name):
+    self.name = name
+    self.ancestor = None
 
 
 def getYoungestCommonAncestor(topAncestor, descendantOne, descendantTwo):
@@ -56,12 +56,12 @@ def getYoungestCommonAncestor(topAncestor, descendantOne, descendantTwo):
       current_descendant_two = current_descendant_two.ancestor
       current_descendant_one = current_descendant_one.ancestor
   return current_descendant_one
-  
-  
+
+
 def get_depth(topAncestor, descendant):
   curr = descendant
   count = 0
   while curr is not topAncestor:
     curr = curr.ancestor
-        count += 1
+    count += 1
   return count
