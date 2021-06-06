@@ -33,3 +33,17 @@ def findLoop(head):
       return curr
     counter[curr] = True
     curr = curr.next
+
+# O(n) time, O(1) space solution
+
+def findLoop(head):
+  first = head.next
+  second = head.next.next
+  while first is not second:
+    first = first.next
+    second = second.next.next
+  first = head
+  while first is not second:
+    first = first.next
+    second = second.next
+  return first
