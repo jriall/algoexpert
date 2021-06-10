@@ -43,3 +43,25 @@ class Node:
         queue.append(child)
       array.append(current.name)
     return array
+
+# Solution using deque to avoid O(n) operation with queue.pop(0)
+
+from collections import deque
+
+class Node:
+  def __init__(self, name):
+    self.children = []
+    self.name = name
+
+  def addChild(self, name):
+    self.children.append(Node(name))
+    return self
+
+  def breadthFirstSearch(self, array):
+    queue = deque([self])
+    while len(queue) > 0:
+      next = queue.popleft()
+      for node in next.children:
+        queue.append(node)
+      array.append(next.name)
+    return array
