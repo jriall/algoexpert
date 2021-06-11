@@ -73,3 +73,32 @@ class BST:
         self.right = BST(value)
       else:
         self.right.insert(value)
+
+# Improved time complexity solution
+
+def minHeightBst(array, root = None):
+  if len(array) == 0:
+		return None
+	middle_index = len(array) // 2
+	root = BST(array[middle_index])
+	root.left = minHeightBst(array[:middle_index], root)
+	root.right = minHeightBst(array[middle_index + 1:], root)
+	return root
+
+class BST:
+  def __init__(self, value):
+    self.value = value
+    self.left = None
+    self.right = None
+
+  def insert(self, value):
+    if value < self.value:
+      if self.left is None:
+        self.left = BST(value)
+      else:
+        self.left.insert(value)
+    else:
+      if self.right is None:
+        self.right = BST(value)
+      else:
+        self.right.insert(value)
