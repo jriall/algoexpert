@@ -18,6 +18,8 @@
 # Sample Output
 # 6 // 0, 10, 6, 5, -1, -3
 
+# Solution 1
+
 def longestPeak(array):
   if len(array) < 3:
     return 0
@@ -53,3 +55,22 @@ def longestPeak(array):
   if not is_increasing and has_increased:
     max_peak = max(max_peak, current_peak)
   return max_peak
+
+# Solution 2 - simplified by identifying peaks and working out from them.
+
+def longestPeak(array):
+  max_peak = 0
+	for i in range(1, len(array) -1):
+		is_peak = array[i - 1] < array[i] > array[i + 1]
+		if is_peak:
+			peak_length = 1
+			left = i - 1
+			while left >= 0 and array[left] < array[left + 1]:
+				left -= 1
+				peak_length += 1
+			right = i + 1
+			while right < len(array) and array[right] < array[right - 1]:
+				right += 1
+				peak_length += 1
+			max_peak = max(max_peak, peak_length)
+	return max_peak
