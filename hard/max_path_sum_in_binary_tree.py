@@ -31,4 +31,4 @@ def get_max_sum(tree):
   max_branch_sum = max(max_child_branch_sum + tree.value, tree.value)
   max_sum_triangle = max(max_branch_sum, left_branch_sum + tree.value + right_branch_sum)
   running_max_path_sum = max(left_sum, right_sum, max_sum_triangle)
-  return (running_max_path_sum, max_branch_sum)
+  return (max_branch_sum, running_max_path_sum)
