@@ -23,16 +23,16 @@
 
 def minRewards(scores):
   result = [1 for score in scores]
-	j = 1
-	while j < len(scores):
-		if scores[j] > scores[j - 1]:
-			result[j] = result[j - 1] + 1
-		j += 1
-	i = len(scores) - 2
-	while i >= 0:
-		if scores[i] > scores[i + 1]:
-			result[i] = max(result[i], result[i + 1] + 1)
-		i -= 1
-	return sum(result)
+  j = 1
+  while j < len(scores):
+    if scores[j] > scores[j - 1]:
+      result[j] = result[j - 1] + 1
+    j += 1
+  i = len(scores) - 2
+  while i >= 0:
+    if scores[i] > scores[i + 1]:
+      result[i] = max(result[i], result[i + 1] + 1)
+    i -= 1
+  return sum(result)
 
 [4, 3, 2, 1, 2, 3, 4, 5, 1]
