@@ -51,3 +51,17 @@ def staircaseTraversal(height, maxSteps):
       steps[step] = steps[step] + steps[step - result]
       result += 1
   return steps[height]
+
+# Improved iterative solution (from solutions video)
+
+def staircaseTraversal(height, maxSteps):
+  steps = [1]
+  curr = 0
+  for step in range(1, height + 1):
+    start = step - maxSteps - 1
+    end = step - 1
+    if start >= 0:
+      curr -= steps[start]
+    curr += steps[end]
+    steps.append(curr)
+  return steps[-1]
