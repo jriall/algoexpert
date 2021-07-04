@@ -42,3 +42,15 @@ class BinaryTree:
         self.value = value
         self.left = None
         self.right = None
+
+# From scratch solution recap
+
+def invertBinaryTree(tree):
+  if tree is None:
+    return
+  left = tree.left
+  right = tree.right
+  tree.right = left
+  tree.left = right
+  invertBinaryTree(tree.left)
+  invertBinaryTree(tree.right)
